@@ -1,0 +1,17 @@
+https://twiki.cern.ch/twiki/bin/view/CMS/MuonReferenceEffs2018
+https://gitlab.cern.ch/cms-muonPOG/MuonReferenceEfficiencies/blob/master/EfficienciesStudies/2018/jsonfiles/RunABCD_SF_ISO.json
+https://gitlab.cern.ch/cms-muonPOG/MuonReferenceEfficiencies/blob/master/EfficienciesStudies/2018/jsonfiles/RunABCD_SF_ID.json
+
+
+
+scalefactors json plotting:
+python3 utils.py -f scalefactors/muon_2018UL.json -t NUM_TrackerMuons_DEN_genTracks -w MediumID -j 0
+python3 utils.py -f scalefactors/muon_2018UL.json -t NUM_LooseRelIso_DEN_MediumPromptID -w MediumID -j 0
+python3 utils.py -f scalefactors/muon_2018UL.json -t NUM_MediumID_DEN_TrackerMuons -w MediumID -j 0
+python3 utils.py -f scalefactors/egammaEffi_MVA_ID_2018.json -t UL-Electron-ID-SF -w  RecoAbove20 -j 0
+python3 utils.py -f scalefactors/egammaEffi_MVA_ID_2018.json -t UL-Electron-ID-SF -w  wp90Iso -j 0
+python3 utils.py -f scalefactors/btagging.json -t deepCSV_comb -w M -j 4
+python3 utils.py -f scalefactors/btagging.json -t deepCSV_comb -w M -j 5
+python3 utils.py -f scalefactors/btagging.json -t deepCSV_incl -w M -j 0
+python3 utils.py -f scalefactors/btagging_eff.json -t btagging_efficiency -w  central -j 5
+python3 utils.py -f scalefactors/btagging_eff.json -t btagging_efficiency -w  central -j 4

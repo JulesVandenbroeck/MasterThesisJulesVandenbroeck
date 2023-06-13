@@ -1,0 +1,332 @@
+{
+    "schema_version": 2,
+    "description": "These are the trigger scalefactors and efficiencies for the ttZ 2018 measurement",
+    "corrections": [
+        {
+            "name": "Trigger_Scalefactors",
+            "description": "These are the trigger scalefactors and efficiencies for the ttZ 2018 measurement",
+            "version": 2,
+            "inputs": [
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "central,up,down"
+                },
+                {
+                    "name": "type",
+                    "type": "string",
+                    "description": "Type: trigger efficiency SF, trigger efficiency in data or trigger efficiency in MC"
+                },
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "jet eta"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "jet pT"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real",
+                "description": "value of scale factor (nominal, up or down)"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "central",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "type",
+                            "content": [
+                                {
+                                    "key": "EfficiencyData",
+                                    "value": {
+                                        "nodetype": "multibinning",
+                                        "inputs": [
+                                            "eta",
+                                            "pt"
+                                        ],
+                                        "edges": [
+                                            [
+                                                0.0,
+                                                1.2,
+                                                2.4
+                                            ],
+                                            [
+                                                40.0,
+                                                140.0,
+                                                240.0
+                                            ]
+                                        ],
+                                        "content": [
+                                            0.9941520467836257,
+                                            0.9789473684210527,
+                                            0.9875,
+                                            1.0
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "EfficiencyMC",
+                                    "value": {
+                                        "nodetype": "multibinning",
+                                        "inputs": [
+                                            "eta",
+                                            "pt"
+                                        ],
+                                        "edges": [
+                                            [
+                                                0.0,
+                                                1.2,
+                                                2.4
+                                            ],
+                                            [
+                                                40.0,
+                                                140.0,
+                                                240.0
+                                            ]
+                                        ],
+                                        "content": [
+                                            0.9977707814559367,
+                                            0.9983755293884518,
+                                            0.9970333111245488,
+                                            0.9980728420086571
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "SF",
+                                    "value": {
+                                        "nodetype": "multibinning",
+                                        "inputs": [
+                                            "eta",
+                                            "pt"
+                                        ],
+                                        "edges": [
+                                            [
+                                                0.0,
+                                                1.2,
+                                                2.4
+                                            ],
+                                            [
+                                                40.0,
+                                                140.0,
+                                                240.0
+                                            ]
+                                        ],
+                                        "content": [
+                                            0.9963731803540783,
+                                            0.9805402272035857,
+                                            0.9904383223527444,
+                                            1.0019308791004315
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "type",
+                            "content": [
+                                {
+                                    "key": "EfficiencyData",
+                                    "value": {
+                                        "nodetype": "multibinning",
+                                        "inputs": [
+                                            "eta",
+                                            "pt"
+                                        ],
+                                        "edges": [
+                                            [
+                                                0.0,
+                                                1.2,
+                                                2.4
+                                            ],
+                                            [
+                                                40.0,
+                                                140.0,
+                                                240.0
+                                            ]
+                                        ],
+                                        "content": [
+                                            0.9989809091749766,
+                                            0.9924933957355291,
+                                            0.9978229558662782,
+                                            1.0
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "EfficiencyMC",
+                                    "value": {
+                                        "nodetype": "multibinning",
+                                        "inputs": [
+                                            "eta",
+                                            "pt"
+                                        ],
+                                        "edges": [
+                                            [
+                                                0.0,
+                                                1.2,
+                                                2.4
+                                            ],
+                                            [
+                                                40.0,
+                                                140.0,
+                                                240.0
+                                            ]
+                                        ],
+                                        "content": [
+                                            0.9979121175050655,
+                                            0.9985189113428975,
+                                            0.9972906674286418,
+                                            0.998357790932955
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "SF",
+                                    "value": {
+                                        "nodetype": "multibinning",
+                                        "inputs": [
+                                            "eta",
+                                            "pt"
+                                        ],
+                                        "edges": [
+                                            [
+                                                0.0,
+                                                1.2,
+                                                2.4
+                                            ],
+                                            [
+                                                40.0,
+                                                140.0,
+                                                240.0
+                                            ]
+                                        ],
+                                        "content": [
+                                            1.0012128313852549,
+                                            0.9941082954461777,
+                                            1.0007919943425347,
+                                            1.0019308791004315
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "type",
+                            "content": [
+                                {
+                                    "key": "EfficiencyData",
+                                    "value": {
+                                        "nodetype": "multibinning",
+                                        "inputs": [
+                                            "eta",
+                                            "pt"
+                                        ],
+                                        "edges": [
+                                            [
+                                                0.0,
+                                                1.2,
+                                                2.4
+                                            ],
+                                            [
+                                                40.0,
+                                                140.0,
+                                                240.0
+                                            ]
+                                        ],
+                                        "content": [
+                                            0.9808971123802744,
+                                            0.951985000694993,
+                                            0.9594771310382073,
+                                            0.9407422865561214
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "EfficiencyMC",
+                                    "value": {
+                                        "nodetype": "multibinning",
+                                        "inputs": [
+                                            "eta",
+                                            "pt"
+                                        ],
+                                        "edges": [
+                                            [
+                                                0.0,
+                                                1.2,
+                                                2.4
+                                            ],
+                                            [
+                                                40.0,
+                                                140.0,
+                                                240.0
+                                            ]
+                                        ],
+                                        "content": [
+                                            0.997620177732689,
+                                            0.9982188764709956,
+                                            0.9967525983832509,
+                                            0.9977422522643428
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "SF",
+                                    "value": {
+                                        "nodetype": "multibinning",
+                                        "inputs": [
+                                            "eta",
+                                            "pt"
+                                        ],
+                                        "edges": [
+                                            [
+                                                0.0,
+                                                1.2,
+                                                2.4
+                                            ],
+                                            [
+                                                40.0,
+                                                140.0,
+                                                240.0
+                                            ]
+                                        ],
+                                        "content": [
+                                            0.9830886317887156,
+                                            0.9535339886366456,
+                                            0.9623320708873988,
+                                            0.9425587461761248
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
